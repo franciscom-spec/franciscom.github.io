@@ -243,7 +243,7 @@
     letter-spacing:.03em;
     text-transform:uppercase;
   }
-  .story-top h4{
+  .story-top h4, .story-top h5{
     font-size:21px;
     margin:5px 0 4px 0;
     font-family:'Newsreader', serif;
@@ -281,6 +281,16 @@
     background:var(--phosphor-dim);
     padding:3px 9px;
     border-radius:999px;
+  }
+
+  .project-group + .project-group{margin-top:40px;}
+  .project-group-head{
+    font-size:20px;
+    font-weight:600;
+    color:var(--phosphor);
+    margin:0 0 20px 0;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
   }
 
   .project-media{
@@ -611,11 +621,41 @@
       <h3 class="section-head">Projects &amp; explorations</h3>
       <p class="section-sub">A few projects that reflect the kinds of problems I like to spend time on.</p>
 
+      <div class="project-group" role="group" aria-labelledby="data-science-projects">
+        <h4 class="project-group-head" id="data-science-projects">Data Science</h4>
+
+      <article class="story-card">
+        <div class="story-top">
+          <div>
+            <div class="story-label">Research project</div>
+            <h5>EL Enrollment and Non-EL Discipline Rates Analysis</h5>
+            <div class="meta">University of Chicago</div>
+          </div>
+        </div>
+        <figure class="project-media">
+          <img src="el-poster.webp" alt="Research poster titled Is Exposure to English Learner Students Associated with Fewer Suspensions Among Non-English Learners?">
+          <figcaption>A poster summarizing the data, modeling, robustness checks, and takeaways from the project.</figcaption>
+        </figure>
+        <p>For this project, I merged and analyzed CRDC and CCD administrative datasets in R to explore how English Learner enrollment share relates to non-EL suspension rates. It was a chance to combine econometric modeling with a question grounded in education policy.</p>
+        <div class="project-actions">
+          <a class="project-link" href="https://drive.google.com/file/d/1RjoVX9o65eWKeFkUBGgPRO4Bo3hRcX_c/view?usp=sharing" target="_blank" rel="noopener">Read research report ↗</a>
+        </div>
+        <div class="tags">
+          <span class="tag">R</span>
+          <span class="tag">OLS regression</span>
+          <span class="tag">econometrics</span>
+        </div>
+      </article>
+      </div>
+
+      <div class="project-group" role="group" aria-labelledby="physics-projects">
+        <h4 class="project-group-head" id="physics-projects">Physics</h4>
+
       <article class="story-card">
         <div class="story-top">
           <div>
             <div class="story-label">Build project</div>
-            <h4>Controlled Wave Generator</h4>
+            <h5>Controlled Wave Generator</h5>
             <div class="meta">Hunt Lab</div>
           </div>
         </div>
@@ -636,7 +676,7 @@
         <div class="story-top">
           <div>
             <div class="story-label">Course project</div>
-            <h4>Quantum Machine Learning Project</h4>
+            <h5>Quantum Machine Learning Project</h5>
             <div class="meta">UChicago Quantum Society</div>
           </div>
         </div>
@@ -659,7 +699,7 @@
         <div class="story-top">
           <div>
             <div class="story-label">Lab report</div>
-            <h4>Two-Photon Interference, Quantum Randomness &amp; BB84</h4>
+            <h5>Two-Photon Interference, Quantum Randomness &amp; BB84</h5>
             <div class="meta">QuantumLab</div>
           </div>
         </div>
@@ -678,29 +718,7 @@
           <span class="tag">BB84</span>
         </div>
       </article>
-
-      <article class="story-card">
-        <div class="story-top">
-          <div>
-            <div class="story-label">Research project</div>
-            <h4>EL Enrollment and Non-EL Discipline Rates Analysis</h4>
-            <div class="meta">University of Chicago</div>
-          </div>
-        </div>
-        <figure class="project-media">
-          <img src="el-poster.webp" alt="Research poster titled Is Exposure to English Learner Students Associated with Fewer Suspensions Among Non-English Learners?">
-          <figcaption>A poster summarizing the data, modeling, robustness checks, and takeaways from the project.</figcaption>
-        </figure>
-        <p>For this project, I merged and analyzed CRDC and CCD administrative datasets in R to explore how English Learner enrollment share relates to non-EL suspension rates. It was a chance to combine econometric modeling with a question grounded in education policy.</p>
-        <div class="project-actions">
-          <a class="project-link" href="https://drive.google.com/file/d/1RjoVX9o65eWKeFkUBGgPRO4Bo3hRcX_c/view?usp=sharing" target="_blank" rel="noopener">Read research report ↗</a>
-        </div>
-        <div class="tags">
-          <span class="tag">R</span>
-          <span class="tag">OLS regression</span>
-          <span class="tag">econometrics</span>
-        </div>
-      </article>
+      </div>
     </section>
 
     <section id="education">
