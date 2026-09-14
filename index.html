@@ -420,6 +420,20 @@
   font-family: "Times New Roman", Times, serif !important;
   }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+
+  @media (min-width:861px){
+    .layout{
+      max-width:none;
+      width:100%;
+      margin:0;
+    }
+    main{min-width:0;}
+    main > section,
+    main > footer{
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
 </style>
 </head>
 <body>
