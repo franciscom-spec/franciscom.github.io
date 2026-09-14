@@ -438,6 +438,42 @@
     }
     .hero .lede{max-width:none;}
   }
+
+  /* Scale typography with the wider desktop layout. */
+  @media (min-width:861px){
+    main{--body-size:clamp(18px,1.15vw,21px);}
+    .hero .lede{font-size:clamp(20px,1.35vw,25px);line-height:1.6;}
+    .kicker{font-size:clamp(24px,1.65vw,30px);}
+    h3.section-head, footer h3{font-size:clamp(30px,2vw,36px);}
+    .story-top h4, .story-top h5, .project-group-head{
+      font-size:clamp(25px,1.65vw,30px);
+    }
+    .about-copy, .story-card p, .highlights li,
+    .about-card p, .mini-list li, .edu-block .courses{
+      font-size:var(--body-size);
+    }
+    .fact strong, .edu-block h4{font-size:clamp(20px,1.3vw,24px);}
+    .fact span:last-child, .story-top .meta, p.section-sub,
+    .edu-block .school, .contact-row, footer p{font-size:18px;}
+    .fact .label, .about-card .eyebrow, .story-label,
+    .mini-list .label, .story-date, .tag, .result-pill,
+    .edu-block .courses em{font-size:14px;}
+    .text-link, .project-link{font-size:16px;padding:10px 14px;}
+    .project-media figcaption{font-size:16px;}
+    .fact{padding:18px 20px;}
+    .hero-grid{
+      grid-template-columns:minmax(0,1fr) minmax(250px,380px);
+      gap:clamp(28px,3vw,56px);
+    }
+    .hero-aside{width:100%;max-width:380px;justify-self:end;}
+    .project-media img{max-height:520px;object-fit:contain;}
+  }
+
+  @media (min-width:861px) and (max-width:1100px){
+    main{padding-left:48px;padding-right:48px;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-aside{justify-self:start;}
+  }
 </style>
 </head>
 <body>
