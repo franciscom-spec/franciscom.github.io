@@ -301,6 +301,24 @@
     overflow:hidden;
   }
   .project-media img{width:100%; height:auto; display:block;}
+  /* Keep the wave photograph fully visible and at a comfortable reading width. */
+  .wave-media{
+    width:100%;
+    max-width:620px;
+    margin:22px auto 20px;
+    border-radius:12px;
+    box-shadow:0 10px 28px rgba(23,26,31,.09);
+  }
+  .project-media.wave-media img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+  }
+  .wave-media figcaption{
+    padding:12px 16px;
+    line-height:1.5;
+  }
   .project-media figcaption{
     padding:11px 13px;
     border-top:1px solid var(--line);
@@ -679,9 +697,9 @@
             <div class="meta">Hunt Lab</div>
           </div>
         </div>
-        <figure class="project-media">
-          <img src="wave-generator.webp" alt="Controlled wave generator creating concentric surface waves over a colored illumination pattern.">
-          <figcaption>An early wave-generator prototype in action, with a color wheel beneath the tank to highlight the waves.</figcaption>
+        <figure class="project-media wave-media">
+          <img src="wave-generator.webp" alt="Top-down view of a circular floating wave generator surrounded by multicolored spiral surface waves." loading="lazy" decoding="async">
+          <figcaption>Surface waves around a floating generator, visualized using a color wheel beneath the water tank.</figcaption>
         </figure>
         <p>I began this project by designing and building a floating device capable of producing repeatable spiral surface waves, combining CAD, resin 3D printing, and ATtiny85 motor control. I now use these devices to investigate interactions between floating bodies, track their motion in MATLAB, and analyze separation patterns in R.</p>
         <div class="tags">
